@@ -97,7 +97,7 @@ export const getSuggestedUsers = async (req, res) => {
     //     { $sample: { size: 10 } },  //get 10 random users
     // ]);
 
-    // // 1,2,3,4,5,6,
+    // 1,2,3,4,5,6,
     // const filteredUsers = users.filter((user) => !usersFollowedByMe.following.includes(user._id)); //filter out the users which are already followed by me
     // const suggestedUsers = filteredUsers.slice(0, 4);       //show only 4 users
 

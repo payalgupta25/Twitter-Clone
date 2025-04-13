@@ -10,8 +10,9 @@ import ProfilePage from './pages/profile/ProfilePage';
 
 import RightPanel from './components/common/RightPanel';
 import Sidebar from './components/common/Sidebar';
-import { useQuery } from "@tanstack/react-query";
 import LoadingSpinner from "./components/common/LoadingSpinner";
+
+import { useQuery } from "@tanstack/react-query";
 
 function App() {
 	const { data: authUser, isLoading } = useQuery({
@@ -31,7 +32,7 @@ function App() {
 				throw new Error(error);
 			}
 		},
-		retry: false,  // disable retries for this query 
+		retry: false,  //React Query automatically retries failed queries.This disable retries for this query 
 	});
 
 	if (isLoading) {
